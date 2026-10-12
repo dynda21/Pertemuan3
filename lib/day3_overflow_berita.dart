@@ -19,10 +19,18 @@ class OverflowBeritaWidget extends StatelessWidget {
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Ellipsis (2 baris):'),
+          Text('Ellipsis (1 baris):'),
           Text(
             judul,
-            maxLines: 2,
+            maxLines: 1, 
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 12),
+          Text('Ellipsis (3 baris):'), 
+          Text(
+            judul,
+            maxLines: 3,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
@@ -35,15 +43,22 @@ class OverflowBeritaWidget extends StatelessWidget {
             softWrap: false,
           ),
           SizedBox(height: 12),
-          Text('Clip (3 baris):'),
+          Text('Clip (4 baris):'),
           Text(
             judul,
-            maxLines: 3,
+            maxLines: 4, // diubah dari 3
             overflow: TextOverflow.clip,
+          ),
+          SizedBox(height: 12),
+          Text('Visible (1 baris):'), // tambahan
+          Text(
+            judul,
+            maxLines: 1,
+            overflow: TextOverflow.visible,
+            softWrap: false,
           ),
         ],
       ),
     );
   }
 }
-
