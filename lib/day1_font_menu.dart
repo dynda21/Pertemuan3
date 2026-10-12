@@ -12,7 +12,8 @@ class FontMenuWidget extends StatelessWidget {
           'Kopi Susu Gula Aren',
           style: TextStyle(
             fontSize: 26,
-            fontWeight: FontWeight.w800, 
+            fontWeight: FontWeight.w300, // diubah dari w800
+            fontFamily: 'serif', // tambahan
             color: Colors.brown,
           ),
         ),
@@ -29,8 +30,8 @@ class FontMenuWidget extends StatelessWidget {
           'Rp 22.000',
           style: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.w600,
-            fontFamily: 'monospace', // coba: serif, sans-serif
+            fontWeight: FontWeight.w900, 
+            fontFamily: 'monospace',
           ),
         ),
         SizedBox(height: 12),
@@ -39,6 +40,33 @@ class FontMenuWidget extends StatelessWidget {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w300,
+          ),
+        ),
+        SizedBox(height: 24), // tambahan: menu kedua
+        Text(
+          'Matcha Latte',
+          style: TextStyle(
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'sans-serif',
+            color: Colors.green,
+          ),
+        ),
+        Text(
+          'Matcha asli dengan susu oat',
+          style: TextStyle(
+            fontSize: 16,
+            fontStyle: FontStyle.italic,
+            color: Colors.grey,
+          ),
+        ),
+        SizedBox(height: 12),
+        Text(
+          'Rp 28.000',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'monospace',
           ),
         ),
       ],
